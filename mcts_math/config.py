@@ -125,6 +125,9 @@ class BaseConfig:
     stop: Optional[List[str]] = field(
         default=None, metadata={"help": "possible stop tokens for each step"}
     )
+    gpu_memory_utilization: float = field(
+        default=0.90, metadata={"help": "Float that controls the percentage of GPU memory to use."}
+    )
     # agent (mcts, step_beam) args
     step_beam_width: int = field(
         default=1, metadata={"help": "beam width for each step. B1 in paper."}
