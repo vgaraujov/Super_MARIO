@@ -8,3 +8,4 @@ step_delim: "\n"
 stop: ["\n</code>", "</code>", "</step>"]
 seed: 1234
 verbose: False
+gpu_memory_utilization: 0.9
