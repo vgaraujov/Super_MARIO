@@ -101,8 +101,8 @@ class BaseConfig:
     top_p: float = field(
         default=1.0, metadata={"help": "Float that controls the cumulative probability of the top tokens to consider. Must be in (0, 1]. Set to 1 to consider all tokens."}
     )
-    top_k: float = field(
-        default=-1.0, metadata={"help": "Float that controls the probability of other highly-scored candidates to be chosen"}
+    top_k: int = field(
+        default=-1, metadata={"help": "Integer that controls the number of top tokens to consider. Set to -1 to consider all tokens."}
     )
     use_beam_search: bool = field(
         default=False, metadata={"help": "whether to enable beam search decoding"}
