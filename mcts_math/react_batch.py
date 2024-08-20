@@ -53,6 +53,7 @@ class REACTBatch(BaseModel):
             trust_remote_code=True,
             seed=self.config.seed,
             swap_space=self.config.swap_space,
+            gpu_memory_utilization=self.config.gpu_memory_utilization,
         )
         sampling_params = SamplingParams(
             temperature=self.config.temperature,
